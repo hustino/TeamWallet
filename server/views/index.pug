@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    title= title
+
+    link(rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous")
+
+  body
+    main#indexVue(role="main" class="container")
+      h1#pageTitle Wallet System
+      #form
+      input(type="hidden" name="id")
+      .row
+        .form-group
+          a.btn.btn-primary.btn-xl(type="button" href="/funds") Funds Transfer
+          a.btn.btn-primary.btn-xl(type="button" href="/balance") Check Balance
+          a.btn.btn-primary.btn-xl(type="button" href="/deposit") Deposit
+        .form-group
+          a.btn.btn-primary.btn-xl(type="button" href="/withdraw") Withdraw
+          a.btn.btn-primary.btn-xl(type="button" href="/transaction") Transaction History
+          a.btn.btn-primary.btn-xl(type="button" href="/bills") Bills Payment
+          
+    script(src="/axios.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+    script(src="/index-vue.js")
+    script(src="/balance-vue.js")
+    script(src="/deposit-vue.js")
+    script(src="/funds-vue.js")
+    script(src="/transaction-vue.js")
+    script(src="/withdraw-vue.js")
+

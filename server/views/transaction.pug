@@ -1,0 +1,31 @@
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    title= title
+
+    link(rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous")
+
+  body
+    main#transactionVue(role="main" class="container")
+      h1#pageTitle Wallet System | Transaction
+      a.btn.btn-danger.float-right.mr-1.mt-2(type = "button" href="/home") Back
+      table.table.mt-3#notesTable
+        tr
+          th ID
+          th Name
+          th Account Number
+          th Balance
+        tr(v-for="user in users")
+          td {{ user.id }}
+          td {{ user.name }}
+          td {{ user.acct_no }}
+          td {{ user.balance }}
+        
+            
+    script(src="/axios.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+    script(src="/transaction-vue.js")
+    
+

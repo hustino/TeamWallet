@@ -1,0 +1,45 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"name": "Franco",
+			"acct_no": "1001",
+			"balance": 0,
+			"PIN": "1234",
+			"log": 0
+		},
+		{
+			"id": 2,
+			"name": "Shiela",
+			"acct_no": "1002",
+			"balance": 100,
+			"PIN": "0000",
+			"log": 0
+		},
+		{
+			"id": 3,
+			"name": "Kiko",
+			"acct_no": "1003",
+			"balance": 2000,
+			"PIN": "1111",
+			"log": 0
+		},
+		{
+			"id": 4,
+			"name": "Pilot",
+			"acct_no": "1004",
+			"balance": 0,
+			"PIN": "2222",
+			"log": 0
+		},
+		{
+			"id": 5,
+			"name": "Brian",
+			"acct_no": "1005",
+			"balance": 50,
+			"PIN": "3333",
+			"log": 0
+		}
+	],
+	"user": []
+}

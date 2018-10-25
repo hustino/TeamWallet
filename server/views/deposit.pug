@@ -1,0 +1,23 @@
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    title TeamWallet
+
+    link(rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous")
+
+  body
+    main#depositVue(role="main" class="container")
+      h1#pageTitle Wallet System | Deposit
+       form#DepositMoney(action="/" method="POST")
+          input.form-control#userid(type="hidden" name="id" v-model="id")
+      .form-group
+          label Your Balance is :
+          input.form-control#balance(type = "text" name= "balance" v-model = "balance" readonly ="")
+      .form-group
+          label Enter Amount :
+          input.form-control#amount(type="text" name="amount" v-model="amount")
+      .form-group.float-right
+          button.btn.btn-success.mr-1(type = "button" v-on:click = "submit") Submit
+          a.btn.btn-danger(type = "button" href = "/home") Cancel
