@@ -1,7 +1,7 @@
 {
-  "name": "wallet",
+  "name": "cardo",
   "version": "1.0.0",
-  "description": "Wallet System",
+  "description": "Ang Probinsyano",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,6 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "morgan": "^1.9.1",
-    "node": "^11.0.0",
     "pug": "^2.0.3",
     "simple-json-store": "0.0.1"
   },

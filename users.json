@@ -1,0 +1,12 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"name": "Ezekiel Ladra Tabije",
+			"email": "tabije.ezekiel@gmail.com",
+			"bank": "Union Bank",
+			"accountNumber": "1235123413",
+			"amount": "12534123"
+		}
+	]
+}

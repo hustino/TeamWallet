@@ -7,17 +7,12 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
-const fundsRouter = require('./server/routers/fundsRouter');
-const balanceRouter = require('./server/routers/balanceRouter');
-const depositRouter = require('./server/routers/depositRouter');
-const withdrawRouter = require('./server/routers/withdrawRouter');
-const transactionRouter = require('./server/routers/transactionRouter');
+
+const notesRouter = require('./server/routers/notesRouter');
+const signupRouter = require('./server/routers/signupRouter');
+const servicesRouter = require('./server/routers/servicesRouter');
+const checkbalanceRouter = require('./server/routers/checkbalanceRouter');
 const indexRouter = require('./server/routers/indexRouter');
-const billsRouter = require('./server/routers/billsRouter');
-const usersRouter = require('./server/routers/usersRouter');
-const loginRouter = require('./server/routers/loginRouter');
-
-
 const port = 3300;
 
 //- Middleware: Logs the request to the server
@@ -57,16 +52,12 @@ app.set('views', path.join(__dirname, 'server/views'));
 app.set('view engine', 'pug');
 
 // Note: The order must be maintained here
-app.use('/',loginRouter);
-app.use('/home', indexRouter);
-app.use('/balance', balanceRouter);
-app.use('/bills', billsRouter);
-app.use('/deposit', depositRouter);
-app.use('/funds', fundsRouter);
-app.use('/transaction', transactionRouter);
-app.use('/api/users', usersRouter);
-app.use('/withdraw', withdrawRouter);
+app.use('/', indexRouter);
+app.use('/signup', signupRouter);
+app.use('/services', servicesRouter);
+app.use('/checkbalance', checkbalanceRouter);
 
+app.use('/api/notes', notesRouter);
 
 app.listen(port, (err) => {
   if(err) { return console.error(err); }
